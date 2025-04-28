@@ -1,0 +1,203 @@
+﻿/*Carousel Settings*/
+.carousel-inner img {
+    margin: auto;
+}
+
+.carousel-inner > .item > img {
+    /*height: 200px;*/
+}
+
+.carousel-control {
+    color: #000 !important;
+}
+
+    .carousel-control.right,
+    .carousel-control.left {
+        background-image: none !important;
+    }
+
+
+/* Sliders */
+.slider {
+    height: 250px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+    .slider .slider-inner {
+        height: 100%;
+    }
+
+    .slider .image-slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+
+@media screen and (min-width: 321px){
+    .slider {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .slider {
+        height: 500px;
+    }
+}
+
+/* Broker Media Styles */
+/* Slide Display Templates */
+
+.broker-media {
+    height: 100%;
+}
+
+    .broker-media.broker-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .broker-media.broker-video {
+        background-color: #444;
+    }
+
+        .broker-media.broker-video video {
+            min-height: 100%;
+            min-width: 100%;
+            position: relative !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    .broker-media .broker-media-wrapper {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .broker-media .overlay-wrapper {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        justify-content: center;
+    }
+
+    @media (max-width: 767px){
+        .broker-media .overlay-content h1 {
+            font-size: 1.75rem;
+            margin-bottom: .125rem;
+        }
+
+        .broker-media .overlay-content p {
+            margin-bottom: .25rem;
+        }
+
+        .broker-media .overlay-content .btn {
+            padding: .25rem .5rem;
+            font-size: .875rem;
+            line-height: 1.5;
+            border-radius: .2rem;
+        }
+    }
+
+@media (min-width: 768px) {
+    .broker-media .overlay-wrapper .overlay-content {
+        margin: 50px 15%;
+        max-width: 50%;
+    }
+}
+
+        .broker-media .overlay-wrapper .overlay-content {
+            margin: 5% 15%;
+            padding: 10px;
+            position: absolute;
+        }
+
+        .broker-media .overlay-wrapper .overlay-content.full-width,
+        .broker-media .overlay-wrapper .overlay-content.full-width.center {
+            width: 100%;
+            margin-left: 0; 
+            margin-right: 0;
+            max-width: 100%;
+        }
+            .broker-media .overlay-wrapper .overlay-content.center {
+                align-self: center;
+                margin: 0;
+            }
+
+            .broker-media .overlay-wrapper .overlay-content.top-left {
+                top: 0;
+                left: 0;
+            }
+
+            .broker-media .overlay-wrapper .overlay-content.top-right {
+                top: 0;
+                right: 0;
+            }
+
+            .broker-media .overlay-wrapper .overlay-content.bottom-left {
+                bottom: 0;
+                left: 0;
+            }
+
+            .broker-media .overlay-wrapper .overlay-content.bottom-right {
+                bottom: 0;
+                right: 0;
+            }
+
+.overlay-content {
+    border-radius: 3px;
+}
+
+    .overlay-content.dark {
+        background-color: rgba(0, 0, 0, .6);
+        color: #FFF;
+    }
+
+        .overlay-content.dark small {
+            color: #F7F7F7;
+        }
+
+    .overlay-content.light {
+        background-color: rgba(255, 255, 255, .9);
+        color: #000;
+    }
+
+    .btn-default { background-color: #FFF; color: #333; }
+
+    /* Slider Overlay Themes */
+    .overlay-content.blue {
+        background-color: rgba(51,122, 183, .6);
+        border-color: #2e6da4;
+    }
+
+    .overlay-content.green {
+        background-color: rgba(92, 184, 92, .6);
+        border-color: #4CAE4C;
+    }
+
+    .overlay-content.red {
+        background-color: rgba(217, 83, 79, .6);
+        border-color: #d43f3a;
+    }
+
+    .overlay-content.transparent { color: #000; }
+    .overlay-content.transparent small { color: #111; }
+    .overlay-content.transparentalternate { color: #FFF; }
+    .overlay-content.transparentalternate small { color: #F7F7F7; }
+        .overlay-content.blue,
+        .overlay-content.blue small,
+        .overlay-content.green,
+        .overlay-content.green small,
+        .overlay-content.red,
+        .overlay-content.red small {
+            color: #F7F7F7;
+        }

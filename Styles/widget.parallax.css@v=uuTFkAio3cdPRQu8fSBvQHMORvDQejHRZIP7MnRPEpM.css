@@ -1,0 +1,66 @@
+﻿/* Parallax Styles */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.parallax-inner {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+}
+
+.parallax.is-small .parallax-inner {
+    padding: 1.5rem;
+}
+
+.parallax.is-halfheight {
+    min-height: 50vh;
+}
+
+.parallax.is-fullheight {
+    min-height: 100vh;
+}
+
+.parallax.is-halfheight .parallax-inner,
+.parallax.is-fullheight .parallax-inner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 769px){
+    .parallax-inner {
+        padding: 3rem 3rem;
+    }
+
+    .parallax.is-medium .parallax-inner {
+        padding: 9rem 4.5rem;
+    }
+
+    .parallax.is-large .parallax-inner {
+        padding: 18rem 6rem;
+    }
+}
+
+.parallax > .parallax-inner > .parallax-body {
+    font-weight: 300;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.parallax > .parallax-inner > .parallax-lead > .lead { font-weight: 500; }
+
+/* Column Styles */
+.column { padding: 1.25rem; }
+.column > .column-title { font-weight: bold; margin-bottom: .75rem; }
+.column > .column-subtitle { margin-bottom: 0; }
+.column > .column-button { margin-top: 1rem; }

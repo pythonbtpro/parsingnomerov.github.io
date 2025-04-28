@@ -1,0 +1,94 @@
+﻿/* Old Hero Image Styles */
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 3rem;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.hero-image h1 {
+    font-size: 3.75rem;
+    font-weight: 800;
+}
+
+.hero-image p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px){
+    .hero-image h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* New Hero Styles */
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.hero h1 {
+    font-size: 3.75rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.hero-content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+}
+
+.hero.is-small .hero-content {
+    padding: 1.5rem;
+}
+
+.hero.is-halfheight {
+    min-height: 50vh;
+}
+
+.hero.is-fullheight {
+    min-height: 100vh;
+}
+
+.hero.is-halfheight .hero-content,
+.hero.is-fullheight .hero-content {
+    align-items: center;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .hero-content {
+        padding: 3rem 3rem;
+    }
+
+    .hero.is-medium .hero-content {
+        padding: 9rem 4.5rem;
+    }
+
+    .hero.is-large .hero-content {
+        padding: 18rem 6rem;
+    }
+}

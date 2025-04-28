@@ -1,0 +1,58 @@
+﻿.services-grid-widget {
+    margin: 0 -15px;
+    padding: .25rem;
+}
+
+.services-grid-widget .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.services-grid-widget .services-grid-widget-title {
+    font-size: 1.75rem;
+    margin: 1rem;
+}
+
+.services-grid-widget .icon-box {
+    padding: 50px 20px;
+    margin: 35px 0 25px 0;
+    text-align: center;
+    height: 200px;
+    background: #FFF;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.services-grid-widget .icon-box .icon {
+    position: absolute;
+    top: -36px;
+    left: calc(50% - 36px);
+    transition: .2s;
+    border-radius: 50%;
+    border: 6px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    background: orange;
+}
+
+.services-grid-widget .icon-box .icon i {
+    color: #FFF;
+    font-size: 24px;
+}
+
+.services-grid-widget .icon-box .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.services-grid-widget .icon-box .description {
+    line-height: 24px;
+    font-size: 14px;
+}

@@ -1,0 +1,111 @@
+﻿(function ($) {
+    var data_click = "unobtrusiveAjaxClick",
+        data_target = "unobtrusiveAjaxClickTarget",
+        data_validation = "unobtrusiveValidation";
+
+    function getFunction(code, argNames) {
+        var fn = window,
+            parts = (code || '').split('.');
+        while (fn && parts.length) {
+            fn = fn[parts.shift()];
+        }
+        if (typeof (fn) === 'function') {
+            return fn;
+        }
+        argNames.push(code);
+        return Function.constructor.apply(null, argNames);
+    }
+
+    function isMethodProxySafe(method) {
+        return method === 'GET' || method === 'POST';
+    }
+
+    function asyncOnSuccess(element, data, contentType) {
+        var mode;
+
+        if (contentType.indexOf('application/x-javascript') !== -1) {
+            return;
+        }
+
+        mode = (element.getAttribute('data-ajax-mode') || '').toUpperCase();
+        $(element.getAttribute('data-ajax-update')).each(function (i, update) {
+            var top;
+
+            switch (mode) {
+                case "BEFORE":
+                    $(update).prepend(data);
+                    break;
+                case "AFTER":
+                    $(update).append(data);
+                    break;
+                case "REPLACE-WITH":
+                    $(update).replaceWith(data);
+                    break;
+                default:
+                    $(update).html(data);
+                    break;
+            }
+        });
+    }
+
+    function asyncRequest(element, options) {
+        var confirm, loading, method, duration;
+
+        loading = $(element.getAttribute('data-ajax-loading'));
+        duration = parseInt(element.getAttribute('data-ajax-loading-duration'), 10) || 0;
+        
+        $.extend(options, {
+            beforeSend: function (xhr) {
+                var result;
+                if (result !== false) {
+                    loading.show(duration);
+                }
+                return result;
+            },
+            complete: function () {
+                loading.hide(duration);
+                getFunction(element.getAttribute('data-ajax-complete'), ['xhr', 'status']).apply(element, arguments);
+            },
+            success: function (data, status, xhr) {
+                asyncOnSuccess(element, data, xhr.getResponseHeader('Content-Type') || 'text/html');
+                getFunction(element.getAttribute('data-ajax-success'), ['data', 'status', 'xhr']).apply(element, arguments);
+            },
+            error: function () {
+                getFunction(element.getAttribute('data-ajax-failure'), ['xhr', 'status', 'error']).apply(element, arguments);
+            }
+        });
+
+        options.data.push({ name: 'X-Requested-With', value: 'XMLHttpRequest' });
+
+        method = options.type.toUpperCase();
+        if (!isMethodProxySafe(method)) {
+            options.type = 'POST';
+            options.data.push({ name: 'X-HTTP-Method-Override', value: method });
+        }
+
+        $.ajax(options);
+    }
+
+    function validate(form) {
+        var validationInfo = $(form).data(data_validation);
+        return !validationInfo || !validationInfo.validate || validationInfo.validate();
+    }
+
+    $(document).on('submit', 'form.ajax-post', function (e) {
+        var clickInfo = $(this).data(data_click) || [],
+            clickTarget = $(this).data(data_target),
+            isCancel = clickTarget && (clickTarget.hasClass('cancel') || clickTarget.attr('formnovalidate') !== undefined);
+
+        e.preventDefault();
+
+        if (!isCancel && !validate(this)) {
+            return;
+        }
+
+        asyncRequest(this, {
+            url: this.action,
+            type: this.method || 'GET',
+            data: clickInfo.concat($(this).serializeArray())
+        });
+    });
+}(jQuery));

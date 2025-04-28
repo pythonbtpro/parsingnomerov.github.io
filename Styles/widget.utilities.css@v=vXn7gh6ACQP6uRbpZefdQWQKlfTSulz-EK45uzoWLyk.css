@@ -1,0 +1,82 @@
+﻿/* Background Images */
+.bg-img-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Overlays */
+.overlay {
+    position: relative;
+}
+
+    .overlay:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0.5;
+    }
+
+/* Overlay Opacity */
+.overlay-0:before { opacity: 0;}
+.overlay-10:before { opacity: 0.1; }
+.overlay-20:before { opacity: 0.2; }
+.overlay-30:before { opacity: 0.3; }
+.overlay-40:before { opacity: 0.4; }
+.overlay-50:before { opacity: 0.5; }
+.overlay-60:before { opacity: 0.6; }
+.overlay-70:before { opacity: 0.7; }
+.overlay-80:before { opacity: 0.8; }
+.overlay-90:before { opacity: 0.9; }
+.overlay-100:before { opacity: 1.0; }
+
+/* Overlay Colors */
+.overlay-black:before { background-color: #000 !important; }
+.overlay-blue:before { background-color: #0061F2 !important; }
+.overlay-cyan:before { background-color: #00CFD5 !important; }
+.overlay-green:before { background-color: #00AC69 !important; }
+.overlay-indigo:before { background-color: #5800E8 !important; }
+.overlay-none:before { background-color: transparent !important; }
+.overlay-orange:before { background-color: #F76400 !important; }
+.overlay-pink:before { background-color: #E30059 !important;}
+.overlay-purple:before { background-color: #6900C7 !important; }
+.overlay-red:before { background-color: #E81500 !important;}
+.overlay-teal:before { background-color: #00BA94 !important; }
+.overlay-white:before { background-color: #FFF !important; }
+.overlay-yellow:before { background-color: #F4A100 !important; }
+
+
+output {
+    position: absolute;
+    background-image: linear-gradient(#444444, #999999);
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    font: bold 15px/30px Georgia;
+    bottom: 175%;
+    left: 0;
+}
+
+    output:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #999999;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: -1px;
+    }
+
+/* Widget Editor */
+.widget-delete-button { cursor: pointer; }

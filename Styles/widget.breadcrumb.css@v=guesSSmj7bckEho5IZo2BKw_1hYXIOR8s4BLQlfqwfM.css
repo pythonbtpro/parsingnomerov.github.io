@@ -1,0 +1,84 @@
+﻿.breadcrumb-widget {
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.breadcrumb-widget {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .breadcrumb-widget.is-small {
+        font-size: .75rem;
+    }
+
+    .breadcrumb-widget.is-medium {
+        font-size: 1rem;
+    }
+
+    .breadcrumb-widget.is-large {
+        font-size: 1.25rem;
+    }
+
+    .breadcrumb-widget.is-extra-large {
+        font-size: 1.5rem;
+    }
+
+    .breadcrumb-widget ol,
+    .breadcrumb-widget ul {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style: none;
+    }
+
+    .breadcrumb-widget.is-centered ol,
+    .breadcrumb-widget.is-centered ul {
+        justify-content: center;
+    }
+
+    .breadcrumb-widget.is-right ol,
+    .breadcrumb-widget.is-right ul {
+        justify-content: flex-end;
+    }
+
+    .breadcrumb-widget li {
+        align-items: center;
+        display: flex;
+    }
+
+    .breadcrumb-widget li + li::before {
+        color: #B5B5B5;
+        content: "\007C";
+    }
+
+    .breadcrumb-widget.has-slash-separator li + li::before {
+        content: "\0002f"
+    }
+
+    .breadcrumb-widget.has-arrow-separator li + li::before {
+        content: "\02192";
+    }
+
+    .breadcrumb-widget.has-bullet-separator li + li::before {
+        content: "\02022";
+    }
+
+    .breadcrumb-widget.has-dot-separator li + li::before {
+        content: "\000b7";
+    }
+
+    .breadcrumb-widget.has-succeeds-separator li + li::before {
+        content: "\0227B";
+    }
+
+    .breadcrumb-widget a {
+        align-items: center;
+        color: #485FC7;
+        display: flex;
+        justify-content: center;
+        padding: 0 .75em;
+    }

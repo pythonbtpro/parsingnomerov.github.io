@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!-- Bootstrap v4 Layout -->
+<html lang="ru" class="h-100" ontouchmove>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Парсинг номеров телефонов - parsingnomerov.ru</title>
+
+
+	<link rel="canonical" href="index.html" />
+
+	<!-- Begin Meta Data -->
+	<meta name="description" content="Парсинг номеров телефонов с любых сайтов и досок объявлений. В том числе сложный парсинг с разгадыванием капчи и т.д." />
+	<meta name="keywords" content="Парсинг номеров телефонов, парсинг номеров, парсинг телефонов" />
+	<!--  End Meta Data  -->
+	<!--  End Meta Data  -->
+
+	<!-- Begin favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicons/profiru-favicon-32x32.ico" />
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicons/profiru-favicon-16x16.ico" />
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicons/profiru-favicon-32x32.ico" />
+	<!-- End favicons -->
+
+
+
+
+
+
+
+	<link href="lib/bootstrap/css/bootstrap.min.css@v=Ww--W3rXBfapN8SZitAvc9jw2Xb-Ixt0rvDsmWmQyTo.css" rel="stylesheet" />
+	<link href="lib/font-awesome/css/all.css@v=HmKKK3VimMDCOGPTx1mp_5Iaip6BWMZy5HMhLc-4o9E.css" rel="stylesheet" />
+	<link href="lib/font-awesome/css/v4-shims.css@v=K06WFaOnRCyK02YNLAAcPDR0ACl_w_UN5iTujm2EmpA.css" rel="stylesheet" />
+	<link href="lib/animate.css/animate.min.css@v=X7rrn44l1-AUO65h1LGALBbOc5C5bOstSYsNlv9MhT8.css" rel="stylesheet" />
+	<link href="lib/slick-carousel/slick.min.css@v=UK1EiopXIL-KVhfbFa8xrmAWPeBjMVdvYMYkTAEv_HI.css" rel="stylesheet" />
+	<link href="lib/slick-carousel/slick-theme.min.css@v=4hqlsNP9KM6-2eA8VUT0kk4RsMRTeS7QGHIM-MZ5sLY.css" rel="stylesheet" />
+	<link href="lib/aos/aos.css@v=GqiEX9BuR1rv5zPU5Vs2qS_NSHl1BJyBcjQYJ6ycwD4.css" rel="stylesheet" />
+
+	<link href="Styles/sliders.css@v=qhjB5_EFZq9zeDv9tDEsIT3Nkf1N2BC1T-VOewDnyMo.css" rel="stylesheet" />
+	<link href="Styles/widget.parallax.css@v=uuTFkAio3cdPRQu8fSBvQHMORvDQejHRZIP7MnRPEpM.css" rel="stylesheet" />
+	<link href="Styles/slidecard.css@v=GFzuS8dSorc5FzqcFG9J5cMCihSTEgGDj2iSD5dXyXQ.css" rel="stylesheet" />
+	<link href="Styles/widget.utilities.css@v=vXn7gh6ACQP6uRbpZefdQWQKlfTSulz-EK45uzoWLyk.css" rel="stylesheet" />
+	<link href="Styles/widget.flipcard.css@v=0p6H0y5kWzW0U0p1MQOM3M_Ehi1_dj5nmPo-GyWpZGU.css" rel="stylesheet" />
+	<link href="Styles/widget.heroimage.css@v=SG5YTT7Pvb7hINmpo3x0D7UYUZFKRvEUt5WReAJM0V8.css" rel="stylesheet" />
+	<link href="Styles/widget.services.css@v=Omz-QRL5GcjpjJgMqUCN9yAqCjmOB74xetTavNCgA4E.css" rel="stylesheet" />
+	<link href="Styles/widget.testimonials.css@v=7hRs3yb4-G6f4hpCcYI2VoSTl_XHMek45Z6w_rAdAJA.css" rel="stylesheet" />
+	<link href="Styles/widget.agents.css@v=8PpUs0fwUUGgjoAAbM9bR20H8XTvUpy6ZhqikcSvSHU.css" rel="stylesheet" />
+	<link href="Styles/widget.breadcrumb.css@v=guesSSmj7bckEho5IZo2BKw_1hYXIOR8s4BLQlfqwfM.css" rel="stylesheet" />
+	<link href="Styles/layout.splash.css@v=ZqOs8lsEqSCLfsBTeXWOMSlFVaz6ubx_VmehLr4eAHI.css" rel="stylesheet" />
+
+	<link href="Styles/offcanvas.css@v=H3VVztDIa2zHYNxhRXWPkaJQXyw2NLtmzbXr3ZFXLpM.css" rel="stylesheet" />
+
+	<style>
+		#header-navigation nav.navbar {
+			margin-bottom: 0;
+		}
+
+		#header-navigation .navbar {
+			border-radius: 0;
+		}
+
+	</style>
+
+
+	<!-- Theme: Navy Blue -->
+	<!--  -->
+	<link href="Styles/Themes/flatly.css@v=FICRGRG0QVinl4wY8JOAn_6Jg5cTR5y6jDjbCIqrI3k.css" rel="stylesheet" />
+
+	<link href="Styles/MenuTheme/default.css@v=20190815061727.css" rel="stylesheet" />
+
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-167409229-1');
+
+	</script>
+
+
+
+
+
+
+	<script type="text/javascript">
+		var appInsights = window.appInsights || function(config) {
+			function i(config) {
+				t[config] = function() {
+					var i = arguments;
+					t.queue.push(function() {
+						t[config].apply(t, i)
+					})
+				}
+			}
+			var t = {
+					config: config
+				},
+				u = document,
+				e = window,
+				o = "script",
+				s = "AuthenticatedUserContext",
+				h = "start",
+				c = "stop",
+				l = "Track",
+				a = l + "Event",
+				v = l + "Page",
+				y = u.createElement(o),
+				r, f;
+			y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js";
+			u.getElementsByTagName(o)[0].parentNode.appendChild(y);
+			try {
+				t.cookie = u.cookie
+			} catch (p) {}
+			for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop());
+			return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function(config, i, u, e, o) {
+				var s = f && f(config, i, u, e, o);
+				return s !== !0 && t["_" + r](config, i, u, e, o), s
+			}), t
+		}({
+			instrumentationKey: '4799d59c-d530-413c-b64d-7f758c4993a8'
+		});
+
+		window.appInsights = appInsights;
+		appInsights.trackPageView();
+
+	</script>
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+
+
+	<!-- Classic Page Layout -->
+	<div class="d-md-none fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-offcanvas">
+			<button class="navbar-toggler p-0" type="button" data-toggle="offcanvas">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="navbar-toggler-icon">
+					<i class="fas fa-fw fa-bars mt-1"></i>
+				</span>
+			</button>
+
+			<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+
+						<a class="nav-link" href="index.html" target="_self">
+							Главная
+						</a>
+
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbar-dropdown-3044" href="index.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Какие сайты мы парсим
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-3044">
+
+							<a class="dropdown-item" href="kakie-saytu-mu-parsim/index.html" target="_self">
+								Какие сайты мы парсим
+							</a>
+
+						
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbar-dropdown-3050" href="index.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Свяжитесь с нами
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-3050">
+
+							<a class="dropdown-item" href="contacts/index.html" target="_self">
+								Свяжитесь с нами
+							</a>
+
+							
+						</div>
+					</li>
+					
+					
+				</ul>
+			</div>
+		</nav>
+
+	</div>
+	<header id="header-container" class="mb-0">
+		<div class="container-fluid">
+			
+			<div id="header-content-bottom-row" class="row">
+				<div id="header-content-left-bottom" class="col-md col-sm-12">
+					<article class="page-content" data-id="145135" data-panel-code="HeaderContentLeftBottom">
+						<p><a title="Бот автоматизации Профи ру" href="index.html"><img class="pt-3" src="Media/Images/ActionLogo.png" alt="Logo2.JPG" width="485" height="125" data-id="139" caption="false" /></a></p>
+					</article>
+				</div>
+				<div id="header-content-right-bottom" class="col-md col-sm-12">
+					<article class="page-content" data-id="145136" data-panel-code="HeaderContentRightBottom">
+						<div class="row pt-4">
+							<div class="col-md-12">
+								<p style="text-align: center;"><a href="contacts/index.html" class="btn btn-lg btn-secondary"> Telegram для консультации </a></p>
+								<p style="text-align: center;"><span style="color: #39325b; font-size: 18pt;"><img src="Media/Images/Telegram.png">
+
+<strong>@zenevg</strong></span></p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<div id="header-navigation" class="main-navigation">
+			<div class="d-flex justify-content-between">
+				<div id="navigation__contentLeft" class="align-self-center flex-shrink-1 ml-2">
+					<article class="page-content" data-id="254533" data-panel-code="NavigationLeft">
+
+					</article>
+				</div>
+				<div class="flex-grow-1 d-none d-sm-block">
+					<nav class="navbar navbar-expand-md py-0">
+						<button class="navbar-toggler my-2" type="button" data-target="#broker-navigation" data-toggle="collapse" aria-controls="broker-navigation" aria-expanded="false" aria-label="Toggle Navigation">
+							<span class="navbar-toggler-icon"><i class="fas fa-fw fa-bars mt-1"></i></span>
+						</button>
+
+						<div id="broker-navigation" class="collapse navbar-collapse">
+							<ul class="navbar-nav m-auto">
+								<li class="nav-item active">
+
+									<a class="nav-link" href="index.html" target="_self">
+										Главная
+									</a>
+
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="index.html#" id="navbar-dropdown-3044" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Какие сайты мы парсим
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-3044">
+
+										<a class="dropdown-item" href="kakie-saytu-mu-parsim/index.html" target="_self">
+											Какие сайты мы парсим
+										</a>
+
+										
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="index.html#" id="navbar-dropdown-3050" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Свяжитесь с нами
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-dropdown-3050">
+
+										<a class="dropdown-item" href="contacts/index.html" target="_self">
+											Свяжитесь с нами
+										</a>
+
+										
+									</div>
+								</li>
+								
+								
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+				<div id="navigation__contentRight" class="align-self-center flex-shrink-1 mr-2">
+					<article class="page-content" data-id="254534" data-panel-code="NavigationRight">
+
+					</article>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main id="body-container" class="flex-shrink-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<article class="page-content" data-id="60048" data-panel-code="BodyContent1">
+						<div id="broker-slider-1" class="carousel slide slider" data-ride="carousel">
+							<div class="carousel-inner slider-inner" role="listbox">
+								<div class="carousel-item broker-media broker-video item  active " data-id="5d600baf-deaa-4d41-a600-2983139ef626">
+									<div class="broker-media-wrapper"><video autoplay="autoplay" loop="loop" muted="">
+											<source src="Media/Images/profi.mp4" />
+										</video>
+										<div class="overlay-wrapper">
+											<div class="overlay-content top-left dark full-width" style="text-align: center;">
+												<h1 style="text-align: center;">Парсинг номеров телефонов<br /> <small></small></h1>
+												
+												<p style="text-align: center;">Парсинг номеров телефонов с любых сайтов и досок объявлений. В том числе сложный парсинг с разгадыванием капчи и т.д.</p>
+												<a href="contacts/index.html" class="btn btn-primary btn-lg"> Нажмите, Чтобы запросить парсинг </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item broker-media broker-video item " data-id="13045086-23d2-4f44-9b09-92ef5594dda8">
+									<div class="broker-media-wrapper">
+											<img src="Media/Images/Contact (7).jpg" />
+										
+										<div class="overlay-wrapper">
+											<div class="overlay-content top-left dark " style="text-align: center;">
+												<h1 style="text-align: center;">Мы поможет Вам<br /> <small>С парсингом номеров</small></h1>
+												<a href="contacts/index.html" class="btn btn-primary btn-lg"> Нажмите, Свяжитесь с нами </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item broker-media broker-image item " data-id="4cf30a73-1447-42a7-83ef-05b762653b5a" style="background-image: url('Media/Images/office-381228_1920.jpg');">
+									<div class="broker-media-wrapper">
+										<div class="overlay-wrapper">
+											<div class="overlay-content top-left dark " style="text-align: center;">
+												<h1 style="text-align: center;">Свяжитесь с нами Сегодня<br /> <small>Чтобы запросить парсинг</small></h1>
+												<a href="contacts/index.html" class="btn btn-primary btn-lg"> Нажмите чтобы начать работу </a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#broker-slider-1" class="left carousel-control carousel-control-prev" role="button" data-slide="prev"> <span class="carousel-control-prev-icon glyphicon glyphicon-chevron-left" aria-hidden="true"> <span class="sr-only">Previous</span> </span> </a> <a href="#broker-slider-1" class="right carousel-control carousel-control-next" role="button" data-slide="next"> <span class="carousel-control-next-icon glyphicon glyphicon-chevron-right" aria-hidden="true"> <span class="sr-only">Next</span> </span> </a>
+						</div>
+					</article>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-12">
+					<article class="page-content" data-id="60049" data-panel-code="BodyContent2">
+						<p>&nbsp;</p>
+						<div class="row justify-content-center">
+							<div class="col-sm-12 col-md px-2 text-center">
+								<div class="flip-card">
+									<div class="flip-card-front" style="background-color: #39325b; color: #ffffff;">
+										<div class="flip-card-content">
+											<h1><i class="fas fa-phone-square-alt"></i></h1>
+											<h5 class="card-title">Актуальные номера</h5>
+										</div>
+									</div>
+									<div class="flip-card-back" style="background-color: #dddddd; color: #39325b;">
+										<div class="flip-card-content">
+											<p>Поддержим свежими номерами.<br>Парсинг выполняется всегда с нуля, поэтому номера самые актуальные</p>
+											<ul class="list-unstyled">
+												<li><span style="color: #ffffff;"><a href="contacts/index.html" class="btn btn-lg btn-primary" style="color: #ffffff;"> Нажмите для связи с нами </a></span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p>&nbsp;</p>
+							<div class="col-sm-12 col-md px-2 text-center">
+								<div class="flip-card">
+									<div class="flip-card-front" style="background-color: #39325b; color: #ffffff;">
+										<div class="flip-card-content">
+											<h1><i class="fab fa-wpforms"></i></h1>
+											<h5 class="card-title">База в формате Excel</h5>
+										</div>
+									</div>
+									<div class="flip-card-back" style="background-color: #dddddd; color: #39325b;">
+										<div class="flip-card-content">
+											<p>Результаты парсинга в формате Excel.<br>Если вам требуется другой формат - это обсуждаемо</p>
+											<ul class="list-unstyled">
+												<li><span style="color: #ffffff;"><a href="contacts/index.html" class="btn btn-lg btn-primary" style="color: #ffffff;"> Нажмите для связи с нами </a></span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p>&nbsp;</p>
+							<div class="col-sm-12 col-md px-2 text-center">
+								<div class="flip-card">
+									<div class="flip-card-front" style="background-color: #39325b; color: #ffffff;">
+										<div class="flip-card-content">
+											<h1><i class="fas fa-dollar-sign"></i></h1>
+											<h5 class="card-title">Цена парсинга - за каждые 10000 номеров 4530 рублей</h5>
+										</div>
+									</div>
+									<div class="flip-card-back" style="background-color: #dddddd; color: #39325b;">
+										<div class="flip-card-content">
+											<p>Или 0,453р. за один номер телефона.<br> При долгосрочном сотрудничестве возможны скидки.</p>
+											<ul class="list-unstyled">
+												<li><span style="color: #ffffff;"><a href="contacts/index.html" class="btn btn-lg btn-primary" style="color: #ffffff;"> Нажмите для связи с нами </a></span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p>&nbsp;</p>
+							<div class="col-sm-12 col-md px-2 text-center">
+								<div class="flip-card">
+									<div class="flip-card-front" style="background-color: #39325b; color: #ffffff;">
+										<div class="flip-card-content">
+											<h1><i class="fas fa-certificate"></i></h1>
+											<h5 class="card-title">Быстрая доставка</h5>
+										</div>
+									</div>
+									<div class="flip-card-back" style="background-color: #dddddd; color: #39325b;">
+										<div class="flip-card-content">
+											<p>Выполнение парсинга в кратчайшие сроки.<br> Стараемся делать максимально быстро.</p>
+											<ul class="list-unstyled">
+												<li><span style="color: #ffffff;"><a href="contacts/index.html" class="btn btn-lg btn-primary" style="color: #ffffff;"> Нажмите для связи с нами </a></span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p>&nbsp;</p>
+						<div class="jumbotron">
+							<h2 style="text-align: center;"><span style="color: #39325b;"><strong>Наши услуги</strong></span></h2>
+							<p><i>Мы парсим сайты различной сложности, как простые, так и сайты, которые очень сложно поддаются парсингу. Обходим большинство защит сайта: капча, recaptcha2, cloudflare, парсинг с авторизацией, парсинг с лимитами на просмотр номер в сутки и т.д. ...</i></p>
+<p>Сайты, доски объявлений, справочники, каталоги и т.д. где указаны номера телефонов.</p>
+<p>Если вам требуется собрать <strong>номера телефонов</strong>, напишите нам по одному из контактов.</p>
+<p>Парсинг базы данных выполняем в таблицу Excel. Это распространенный и многим известный формат таблицы, с данным форматом просто работать.</p>
+<p>Стандартно мы парсим данные и записываем их в следующие колонки, по названию: URL страницы сайта, Название, Имя, Цена, Телефон, и возможно другие данные.</p>
+<p>Без разницы к какой стране относится сайт. На русском, на английском, или на другом языке, хоть на китайском. ... Мы парсим Все!</p>
+<p>Время на парсинг может занимать от 1 дня до нескольких недель, в зависимости от сложности защиты сайта.</p>
+<p>Цена наших услуг: за каждые 10000 номеров 4530 рублей, или 0.453 рубля за <strong>номер</strong>.</p>
+<p><i>Для заказа парсинга, пишите в наш телеграм: <b>@zenevg</b></i></p>
+</ul>
+<br>
+						</div>
+						<div class="parallax" style="background-image: url('Media/Images/sunset-4897417_1920.jpg');">
+							<div class="parallax-inner" style="padding: 25px; color: #ffffff;">
+								<div class="parallax-title d-flex justify-content-center">
+									<h1 class="display-4"><em><strong>Parsingnomerov.ru - парсинг номеров</strong></em></h1>
+								</div>
+								<div class="parallax-lead text-center">
+									<p class="lead"><span style="font-size: 18pt;"><em><strong>Парсинг номеров телефонов</strong></em></span></p>
+								</div>
+								<div class="parallax-body text-center">&nbsp;</div>
+								<div class="row justify-content-center mt-4">
+									<div class="col text-center">
+										<article class="column">
+											<h5 class="column-title">Сайты</h5>
+											<div class="column-button"><a class="btn btn-lg btn-primary" href="kakie-saytu-mu-parsim/index.html"> Подробнее </a></div>
+										</article>
+									</div>
+									<div class="col text-center">
+										<article class="column">
+											<h5 class="column-title">Доски</h5>
+											<div class="column-button"><a class="btn btn-lg btn-primary" href="kakie-saytu-mu-parsim/index.html"> Подробнее </a></div>
+										</article>
+									</div>
+									<div class="col text-center">
+										<article class="column">
+											<h5 class="column-title">Справочники</h5>
+											<div class="column-button"><a class="btn btn-lg btn-primary" href="kakie-saytu-mu-parsim/index.html"> Подробнее </a></div>
+										</article>
+									</div>
+									<div class="col text-center">
+										<article class="column">
+											<h5 class="column-title">Каталоги</h5>
+											<div class="column-button"><a class="btn btn-lg btn-primary" href="kakie-saytu-mu-parsim/index.html"> Подробнее </a></div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row py-5" style="background-color: #f3f3f3;">
+							<div class="col-md-2"></div>
+							<div class="col-md-4 pt-2">
+								<h3 style="text-align: center;"><strong>Контакты для связи:</strong></h3>
+								<br>
+								
+
+								
+								<p style="text-align: center;"><span style="color: #003366; font-size: 18pt;"><img src="Media/Images/Telegram.png">
+
+<strong>@zenevg</strong></span></p>
+								
+							</div>
+							
+							<div id="contacnus" class="col-md-2"></div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer id="footer-container" class="footer mt-auto py-3">
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col text-center">
+					<article class="page-content" data-id="68428" data-panel-code="FooterContent">
+						<div class="row p-4">
+							<div class="col">
+								
+								
+								<p><span style="color: #ffffff;"><span style="font-size: 12pt;">Парсинг номеров телефонов © 2008 - 2025</span></span></p>
+								
+							</div>
+						</div>
+						
+						
+					</article>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+	<!-- AzureProduction -->
+
+	<script src="lib/jquery/dist/jquery.js@v=WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js@v=9nt4LsWmLI_O24lTW89IzAKuBqEZ47l_4rh1-tH_NY8"></script>
+	<script src="Scripts/ces.ajax-form.js@v=NTzuNFITALKeT8juVkSSLmlEZRGPHIBVUvQVNw85oXc"></script>
+
+
+	<script>
+		const ANNOUNCEMENT_MODAL = 'modal__ГлавнаяAnnouncement';
+		const ANNOUNCEMENT_KEY = 'ГлавнаяAnnouncement';
+
+		if (!!document.getElementById(ANNOUNCEMENT_MODAL)) {
+			if (sessionStorage.getItem(ANNOUNCEMENT_KEY) !== 'true') {
+				$('#' + ANNOUNCEMENT_MODAL).modal('show');
+
+				sessionStorage.setItem(ANNOUNCEMENT_KEY, 'true');
+			}
+		}
+
+	</script>
+
+
+	<script>
+		$(function() {
+			'use strict'
+
+			$('[data-toggle="offcanvas"]').on('click', function() {
+				$('.offcanvas-collapse').toggleClass('open');
+			});
+		});
+
+	</script>
+
+
+	<script src="lib/slick-carousel/slick.min.js@v=DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A"></script>
+	<script src="lib/aos/aos.js@v=pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c"></script>
+
+	<script>
+		(function() {
+			$('img').addClass('img-fluid');
+
+			$('.testimonial-card-wrapper').slick({
+				autoplay: true,
+				dots: true,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				responsive: [{
+						breakpoint: 800,
+						settings: {
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 600,
+						settings: {
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+
+			AOS.init();
+		})();
+
+	</script>
+</body>
+
+</html>
